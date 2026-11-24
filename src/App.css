@@ -1,0 +1,125 @@
+:root {
+  --verde-oscuro: #1b4332;
+  --verde-principal: #2d6a4f;
+  --verde-claro: #d8f3dc;
+  --fondo-suave: #f6fbf7;
+  --texto: #1f2933;
+  --borde: #cde4d3;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--fondo-suave);
+  color: var(--texto);
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.aparecer {
+  animation: aparecer 0.35s ease-out;
+}
+
+.vv-contenedor {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.vv-header {
+  background-color: var(--verde-principal);
+  color: #ffffff;
+  padding: 1.25rem 1.5rem;
+}
+
+.vv-marca {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.vv-hoja {
+  font-size: 1.8rem;
+}
+
+.vv-titulo {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.vv-subtitulo {
+  margin: 0.15rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.vv-menu {
+  background-color: var(--verde-oscuro);
+  padding: 0.6rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.vv-link {
+  color: #e9f5ec;
+  text-decoration: none;
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.vv-link:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.vv-link.activo {
+  background-color: var(--verde-claro);
+  color: var(--verde-oscuro);
+  font-weight: 600;
+}
+
+.vv-contenido {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.vv-footer {
+  background-color: var(--verde-claro);
+  color: var(--verde-oscuro);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--borde);
+}
+
+.vv-boton {
+  display: inline-block;
+  margin-top: 0.75rem;
+  background-color: var(--verde-principal);
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.vv-boton:hover {
+  background-color: var(--verde-oscuro);
+}
